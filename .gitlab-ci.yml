@@ -1,9 +1,9 @@
-image: python:3.11
+image: python:3.11                                        # Specify Docker image
 
-before_script:
+before_script:                                            # Before Script job
   - pip install -r requirements.txt
 
-test:
+test:                                                     # Test job
   stage: test
   script:
     - mkdocs build --strict --verbose --site-dir test
@@ -11,9 +11,9 @@ test:
     paths:
       - test
   except:
-    - master
+    - main
 
-pages:
+pages:                                                     # Tell the runner to deploy to Gitlab pages
   stage: deploy
   script:
     - mkdocs build --strict --verbose
@@ -21,4 +21,4 @@ pages:
     paths:
       - public
   only:
-    - master
+    - main
