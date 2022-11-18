@@ -16,7 +16,7 @@ test:                                                     # Test job
 pages:                                                     # Tell the runner to deploy to Gitlab pages
   stage: deploy
   script:
-    - mkdocs build --strict --verbose
+    - mkdocs build --strict --verbose --site-dir public
   artifacts:
     paths:
       - public
