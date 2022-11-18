@@ -10,8 +10,8 @@ test:
   artifacts:
     paths:
       - test
-    except:
-      - master
+  except:
+    - master
 
 pages:
   stage: deploy
