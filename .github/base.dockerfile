@@ -7,7 +7,7 @@ ENV RUNNER_ALLOW_RUNASROOT 1
 RUN apt update -y && apt upgrade -y
 
 # Install curl
-RUN apt install curl -y
+RUN apt install curl -y && apt install git -y
 
 # Working directory
 WORKDIR /github-runner
