@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ubuntu:22.10
+FROM --platform=linux/amd64 ubuntu:22.04
 
 # Allow run as root
 ENV RUNNER_ALLOW_RUNASROOT 1
